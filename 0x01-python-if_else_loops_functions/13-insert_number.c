@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * insert_node - inserts node in an ordereed list
  * @head: the pointer to pointer of first node of listint_t list
@@ -5,7 +6,7 @@
  * Return: address of the new linked list
  *
  */
-lstint_t *insert_node(listint_t **head, int number)
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new_node = malloc(sizeof(listint_t));
 
