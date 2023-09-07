@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     from sys import argv
-#this
+# this
     print("{:d} argument".format(len(argv) - 1), end="")
     if len(argv) == 1:
         print(".")
