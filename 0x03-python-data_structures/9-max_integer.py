@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-# ttest if null
 def max_integer(my_list=[]):
-    if not my_list or len(my_list) is 0:
+    if not my_list:
         return None
 
     the_max = my_list[0]
