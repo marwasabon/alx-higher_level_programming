@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * reverse :reverse a singly linked list.
+ * reverse - reverse a singly linked list.
  * @head: pointer to pointer of first node of listint_t list.
  * Return: reversed list.
  */
@@ -25,7 +25,7 @@ void reverse(listint_t **head)
 }
 
 /**
- * is_palindrome:checks if a singly linked list is a palindrome.
+ * is_palindrome - checks if a singly linked list is a palindrome.
  * @head: pointer to pointer of first node of listint_t list.
  * Return: 1 if the list is plaindrome or 0 if its not.
  */
@@ -43,7 +43,7 @@ int is_palindrome(listint_t **head)
 	{
 		fast = fast->next->next;
 		temp = slow;
-	       	slow = slow->next;
+		slow = slow->next;
 		temp->next = prev;
 		prev = temp;
 	}
@@ -61,4 +61,3 @@ int is_palindrome(listint_t **head)
 
 	return (1);
 }
-
