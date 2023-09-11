@@ -1,52 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 /**
- * is_palindrome:checks if a singly linked list is a palindrome.
+ * reverse :reverse a singly linked list.
  * @head: pointer to pointer of first node of listint_t list.
- * Return: 1 if the list is plaindrome or 0 if its not.
+ * Return: reversed list.
  */
-
-int is_palindrome(listint_t **head)
+void reverse(listint_t **head)
 {
-	if (*head == NULL)
-	{
-		return (1);
-	}
-	listint_t *slow = *head;
-	listint_t *fast = *head;
 	listint_t *prev = NULL;
-
-	while (fast && fast->next)
-	{
-		fast = fast->next->next;
-		slow->next = prev;
-		prev = slow;
-	}
-	if (fast)
-	{
-		slow = slow->next;
-	}
-	listint_t *current = slow;
+	listint_t *current = *head;
 	listint_t *next = NULL;
 
-	while (current)
+	while (current != NULL)
 	{
 		next = current->next;
 		current->next = prev;
 		prev = current;
 		current = next;
+
 	}
+	*head = prev;
 
-	listint_t *left = *head;
-	listint_t *right = prev;
+}
 
-	while (right)
+/**
+ * is_palindrome:checks if a singly linked list is a palindrome.
+ * @head: pointer to pointer of first node of listint_t list.
+ * Return: 1 if the list is plaindrome or 0 if its not.
+ */
+int is_palindrome(listint_t **head)
+{
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+	listint_t *prev = NULL;
+	listint_t *temp;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+
+	while (fast != NULL && fast->next != NULL)
 	{
-		if (left->n != right->n)
-		{
-			return (0);
-		}
-		left = left->next;
-		right = right->next;
+		fast = fast->next->next;
+		temp = slow;
+	       	slow = slow->next;
+		temp->next = prev;
+		prev = temp;
 	}
+
+	if (fast != NULL)
+		slow = slow->next;
+
+	while (slow != NULL)
+	{
+		if ((*head)->n != slow->n)
+			return (0);
+		*head = (*head)->next;
+		slow = slow->next;
+	}
+
 	return (1);
 }
+
