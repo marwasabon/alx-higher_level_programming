@@ -1,14 +1,11 @@
 #!/usr/bin/python3
+def square(x):
+    return x * x
+
 def square_matrix_simple(matrix=[]):
-    rows = len(matrix)
-    cols = len(matrix[0])
+    new_list = [row[:] for row in matrix]
 
-    result = []
+    for i in range(len(new_list)):
+        new_list[i] = list(map(square, new_list[i]))
 
-    for i in range(rows):
-        row = []
-        for j in range(cols):
-            row.append(matrix[i][j] ** 2)
-            result.append(row)
-
-        return result
+    return new_list
