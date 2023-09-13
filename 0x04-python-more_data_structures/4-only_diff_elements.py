@@ -4,7 +4,7 @@ def only_diff_elements(set_1, set_2):
     new_set = set()
 
     for i in temp:
-        if temp_list.count(i) == 1:
+        if temp.count(i) == 1:
             new_set.add(i)
 
     return set(new_set)
