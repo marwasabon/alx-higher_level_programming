@@ -5,6 +5,6 @@ def only_diff_elements(set_1, set_2):
 
     for i in range(len(temp)):
         if temp_list.count(temp[i]) == 1:
-            new_set.append(temp[i])
+            new_set.add(temp[i])
 
     return set(new_set)
