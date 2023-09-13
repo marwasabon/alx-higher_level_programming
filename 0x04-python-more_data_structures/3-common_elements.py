@@ -7,4 +7,5 @@ def common_elements(set_1, set_2):
     for i in range(len(temp_list)):
         if temp_list.count(temp_list[i]) > 1:
             new_set.append(temp_list[i])
+
     return set(new_set)
