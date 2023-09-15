@@ -6,7 +6,7 @@ def best_score(a_dictionary):
         return None
     start = 0
 
-    for key in my_dict:
+    for key in a_dictionary:
         if start is 0:
             holder = key
             score = a_dictionary[key]
