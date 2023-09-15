@@ -1,12 +1,5 @@
-def update_dictionary(my_dict, key, value):
+#!/usr/bin/python3
+def update_dictionary(a_dictionary, key, value):
 
-    ''' this function is to update  my_dict
-
-        Args:
-        my_dic: a dictionary to update
-        key: key to the new value to add my_dict
-        value: new value to add to a_dictionary
-    '''
-
-    my_dict[key] = value
-    return my_dict
+    a_dictionary[key] = value
+    return a_dictionary
