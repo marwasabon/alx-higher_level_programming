@@ -3,6 +3,8 @@
 This is a Python script that defines a class named Square.
 
 """
+
+
 class Square:
     """
     This is a Python script that defines a class named Square.
