@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This is a Python script that defines a class named Square.
+
+"""
 class Square:
     """
     This is a Python script that defines a class named Square.
@@ -8,7 +12,7 @@ class Square:
 
     Attributes:None
 
-     Methods:None
+    Methods:None
 
      """
     '''what is qrong here pls'''
