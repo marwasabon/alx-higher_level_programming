@@ -41,13 +41,17 @@ class Rectangle:
         TypeError: If size is not an integer.
         ValueError: If size is less than 0.
         Methods:
-        __init__(self, width=0, height=0): Initializes a new instance of the Rectangle class.
-        perimeter(self): Calculates and returns the perimeter of the rectangle.
+        __init__(self, width=0, height=0):
+        Initializes a new instance of the Rectangle class.
+        perimeter(self):
+        Calculates and returns the perimeter of the rectangle.
          area(self): Calculates and returns the area of the rectangle.
          width (property): Gets and sets the width of the rectangle.
          height (property): Gets and sets the height of the rectangle.
          __str__(self): Returns a string representation of the rectangle.
-         __repr__(self): Returns a string representation that can be used to recreate the object.
+         __repr__(self):
+         Returns
+         a string representation that can be used to recreate the object.
          __del__(self): Prints a message when the rectangle object is deleted.
         """
         if not isinstance(width, int):
