@@ -118,5 +118,8 @@ class Rectangle:
         """
         Get and set the current size of the square.
         """
-        return ("Rectangle(width={}, "
-                "height={})".format(self.__width, self.__height))
+        if self.area() == 0:
+            return ""
+        rectangle_rows = ("#" * self.__width + '\n') * (self.__height - 1)
+        last_row = "#" * self.__width
+        return rectangle_rows + last_row
