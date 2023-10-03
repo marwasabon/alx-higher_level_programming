@@ -116,6 +116,6 @@ class Rectangle:
     def __repr__(self):
         """
         Get and set the current size of the square.
-        """
-        return "Rectangle(" + str(self.__width) + ", "\
-                + str(self.__height) + ")"
+        """       
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+        
