@@ -102,6 +102,7 @@ class Rectangle:
 
             raise ValueError(self.heightValue)
         self.__height = value
+
     def __str__(self):
         """
         Get and set the current size of the square.
