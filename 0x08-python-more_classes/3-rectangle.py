@@ -112,7 +112,7 @@ class Rectangle:
             return ""
         return ("#" * self.__width + '\n') * self.__height
 
-    def __rpr__(self):
+    def __repr__(self):
         """
         Get and set the current size of the square.
         """
