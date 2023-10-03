@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is a Python script that defines a class named Square.
+This is a Python script that defines a class named Rectangle.
 
 """
 
@@ -45,8 +45,8 @@ class Rectangle:
             raise TypeError(self.heightType)
         if height < 0:
             raise ValueError(self.heightValue)
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
