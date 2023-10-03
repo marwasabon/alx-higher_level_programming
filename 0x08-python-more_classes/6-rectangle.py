@@ -27,6 +27,8 @@ class Rectangle:
 
     heightValue = "height must be >= 0"
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Initializes a new instance of the Rectangle class.
@@ -47,6 +49,7 @@ class Rectangle:
             raise ValueError(self.heightValue)
         self.__height = height
         self.__width = width
+        Rectangle.number_of_instances += 1
 
     def perimeter(self):
         """
