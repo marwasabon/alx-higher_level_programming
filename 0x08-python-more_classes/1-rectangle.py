@@ -45,8 +45,8 @@ class Rectangle:
             raise TypeError(self.heightType)
         if height < 0:
             raise ValueError(self.heightValue)
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
 
     @property
     def width(self):
