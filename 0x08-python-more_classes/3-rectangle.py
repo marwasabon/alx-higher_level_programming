@@ -104,17 +104,19 @@ class Rectangle:
         self.__height = value
 
     def __str__(self):
-        """
-        Get and set the current size of the square.
-        """
-        if self.area() is 0:
-            return ""
-        return ("#" * self.__width + '\n') * self.__height
 
-    def __rpr__(self):
         """
         Get and set the current size of the square.
         """
-        if self.area() is 0:
-            return ""
-        return ("#" * self.__width + '\n') * self.__height
+
+        str_s = ""
+
+        if (self.__height == 0) or (self.__width == 0):
+            return str_s
+        for i in range(self.__height):
+            for j in range(self.__width):
+                str_s = str_s + "#"
+                if (i != self.__height - 1):
+                    str_s = str_s + "\n"
+            return str_s
+
