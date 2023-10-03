@@ -118,5 +118,7 @@ class Rectangle:
         """
         Get and set the current size of the square.
         """
-        return ("Rectangle(width={}, "
-            "height={})".format(self.__width, self.__height))
+        module = self.__class__.__module__
+        class_name = self.__class__.__name__
+        id_hex = id(self)
+        return "<{}.{} object at 0x{:x}>".format(module, class_name, id_hex)
