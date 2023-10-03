@@ -19,13 +19,13 @@ class Rectangle:
     """
     '''what is qrong here pls'''
 
-    widthType = "The width must be an integer."
+    widthType = "width must be an integer."
 
-    widthValue = "The width must >=0"
+    widthValue = "width must >=0"
 
-    heightType = "The height must be an integer."
+    heightType = "height must be an integer."
 
-    heightValue = "The height must be >=0"
+    heightValue = "height must be >=0"
 
     def __init__(self, width=0, height=0):
         """
