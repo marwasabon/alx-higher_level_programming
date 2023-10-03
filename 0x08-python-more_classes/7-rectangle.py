@@ -27,6 +27,8 @@ class Rectangle:
 
     heightValue = "height must be >= 0"
 
+    print_symbol = "#"
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -112,7 +114,7 @@ class Rectangle:
         """
         if self.area() is 0:
             return ""
-        return ("#" * self.__width + '\n') * self.__heigh
+        return ((self.print_symbol) * self.__width + '\n') * self.__heigh
 
     def __repr__(self):
         """
