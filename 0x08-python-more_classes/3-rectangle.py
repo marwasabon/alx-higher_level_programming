@@ -108,7 +108,7 @@ class Rectangle:
         """
         Get and set the current size of the square.
         """
-        if self.area() is 0:
+        if self.area() == 0:
             return ""
         return ("#" * self.__width + '\n') * self.__height
 
@@ -116,6 +116,4 @@ class Rectangle:
         """
         Get and set the current size of the square.
         """
-        if self.area() is 0:
-            return ""
-        return ("#" * self.__width + '\n') * self.__height
+        return "Rectangle({}, {})".format(self.__width, self.__height)
