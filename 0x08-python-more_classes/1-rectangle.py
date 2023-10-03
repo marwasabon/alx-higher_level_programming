@@ -19,11 +19,11 @@ class Rectangle:
     """
     '''what is qrong here pls'''
 
-    widthType = "width must be an integer."
+    widthType = "width must be an integer"
 
-    widthValue = "width must >=0"
+    widthValue = "width must be >=0"
 
-    heightType = "height must be an integer."
+    heightType = "height must be an integer"
 
     heightValue = "height must be >=0"
 
