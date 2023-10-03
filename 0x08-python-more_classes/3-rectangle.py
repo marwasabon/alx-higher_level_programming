@@ -110,7 +110,10 @@ class Rectangle:
         """
         if self.area() == 0:
             return ""
-        return ("#" * self.__width + '\n') * (self.__height - 1) + "#" * self.__width
+        rectangle_rows = ("#" * self.__width + '\n') * (self.__height - 1)
+        last_row = "#" * self.__width
+        return rectangle_rows + last_row
+
     def __repr__(self):
         """
         Get and set the current size of the square.
