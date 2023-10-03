@@ -40,6 +40,15 @@ class Rectangle:
         Raises:
         TypeError: If size is not an integer.
         ValueError: If size is less than 0.
+        Methods:
+        __init__(self, width=0, height=0): Initializes a new instance of the Rectangle class.
+        perimeter(self): Calculates and returns the perimeter of the rectangle.
+         area(self): Calculates and returns the area of the rectangle.
+         width (property): Gets and sets the width of the rectangle.
+         height (property): Gets and sets the height of the rectangle.
+         __str__(self): Returns a string representation of the rectangle.
+         __repr__(self): Returns a string representation that can be used to recreate the object.
+         __del__(self): Prints a message when the rectangle object is deleted.
         """
         if not isinstance(width, int):
             raise TypeError(self.widthType)
@@ -112,14 +121,14 @@ class Rectangle:
         """
         Get and set the current size of the square.
         """
-    if self.width == 0 or self.height == 0:
-        return ""
-    else:
-        rectangle_str = ""
-        for i in range(self.height):
-            rectangle_str += str(self.print_symbol) * self.width + "\n"
+        if self.width == 0 or self.height == 0:
+            return ""
+        else:
+            rectangle_str = ""
+            for i in range(self.height):
+                rectangle_str += str(self.print_symbol) * self.width + "\n"
 
-        return rectangle_str
+            return rectangle_str
 
     def __repr__(self):
         """
