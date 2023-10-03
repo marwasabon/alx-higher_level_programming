@@ -1,0 +1,20 @@
+"""
+This is the test file for add_integer.py
+"""
+>>> from add_integer import add_integer
+>>> add_integer(3, 5)  # Test with two positive integers
+8
+>>> add_integer(2.5, 4)  # Test with a float and an integer
+6
+>>> add_integer(-1, 1)  # Test with a negative integer and a positive integer
+0
+>>> add_integer(0) # Test with one argument
+98
+>>> add_integer(3.5, 5.5)  
+8
+>>> add_integer(-2.5, -4.5)  
+-6
+>>> add_integer(2.5, 5)
+7
+>>> add_integer(1, 4) 
+5
