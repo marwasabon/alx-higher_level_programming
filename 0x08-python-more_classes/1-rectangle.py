@@ -21,11 +21,11 @@ class Rectangle:
 
     widthType = "width must be an integer"
 
-    widthValue = "width must be >=0"
+    widthValue = "width must be >= 0"
 
     heightType = "height must be an integer"
 
-    heightValue = "height must be >=0"
+    heightValue = "height must be >= 0"
 
     def __init__(self, width=0, height=0):
         """
