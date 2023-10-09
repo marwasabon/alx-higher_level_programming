@@ -1,0 +1,18 @@
+"""
+This is the test file for add_integer.py
+To execute the doctest use the command:
+python3 -m doctest -v ./tests.txt
+"""
+>>> from add_integer import add_integer
+>>> add_integer(3, 5)
+8
+>>> add_integer(2.5, 4)
+6
+>>> add_integer(-1, 1)
+0
+>>> add_integer(0)
+98
+>>> add_integer('3', 4)
+Traceback (most recent call last):
+  ...
+  TypeError: a must be an integer`

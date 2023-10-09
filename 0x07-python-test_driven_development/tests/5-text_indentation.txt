@@ -1,0 +1,32 @@
+>>> from text_indentation import text_indentation
+
+    >>> import io
+    >>> import sys
+    >>> sys.stdout = io.StringIO()
+    >>> text_indentation("Hello. How are you? I hope you're doing well:")
+    >>> print(sys.stdout.getvalue())
+    'Hello.
+
+    How are you?
+
+    I hope you're doing well:
+
+    '
+    
+    >>> sys.stdout = io.StringIO()
+    >>> text_indentation("This is a test. This is only a test:")
+    >>> print(sys.stdout.getvalue())
+    'This is a test.
+
+    This is only a test:
+
+    '
+    
+    >>> sys.stdout = io.StringIO()
+    >>> text_indentation("What time is it? It's time to code:")
+    >>> print(sys.stdout.getvalue())
+    'What time is it?
+
+    It's time to code:
+
+    '
