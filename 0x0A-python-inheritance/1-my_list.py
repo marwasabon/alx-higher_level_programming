@@ -14,4 +14,3 @@ class MyList(list):
         this is my first function that sorts
         '''
         print(sorted(self))
-        return new_list
