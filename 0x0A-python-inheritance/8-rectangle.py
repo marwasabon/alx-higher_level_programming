@@ -5,7 +5,7 @@ This is a Python script that defines a class named mylist..
 """
 
 
-class BaseGeometry:
+class BaseGeometry(BaseGeometry):
 
     """
     A base class for geometrical shapes.
