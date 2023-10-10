@@ -20,10 +20,14 @@ def load_from_json_file(filename):
         except FileNotFoundError:
             return []
 
-        def save_to_json_file(my_obj, filename):
-            with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(my_obj, f)
-                filename = "add_item.json"
-                my_list = load_from_json_file(filename)
-                my_list.extend(sys.argv[1:])
-                save_to_json_file(my_list, filename)
+
+def save_to_json_file(my_obj, filename):
+    '''
+    this is save to json file
+    '''
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(my_obj, f)
+        filename = "add_item.json"
+        my_list = load_from_json_file(filename)
+        my_list.extend(sys.argv[1:])
+        save_to_json_file(my_list, filename)
