@@ -13,12 +13,10 @@ def class_to_json(obj):
     description with simple data structure (list, dictionary, string,
     integer and boolean) for JSON serialization of an object:
     '''
-    return obj.__dict__
-    '''
     if isinstance(obj, list):
-        return [class_to_json(item) for item in obj]
+        return obj
     elif isinstance(obj, dict):
-        return {key: class_to_json(value) for key, value in obj.items()}
+        return obj
     elif isinstance(obj, str):
         return obj
     elif isinstance(obj, int):
@@ -26,7 +24,11 @@ def class_to_json(obj):
     elif isinstance(obj, bool):
         return obj
     elif hasattr(obj, '__dict__'):
-        return {key: class_to_json(value) for key, value in obj.__dict__.items()}
+        return {
+                key: class_to_json(value)
+                for key, value in obj.__dict__.items()
+                }
     else:
         return None
-    '''
+    else:
+        return None
