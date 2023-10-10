@@ -4,8 +4,6 @@ This is a Python script..
 
 """
 
-import json
-
 
 def class_to_json(obj):
     '''
