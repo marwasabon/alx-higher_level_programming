@@ -23,8 +23,8 @@ class Student:
 
     def to_json(self):
         '''
-        Write a function that returns the dictionary
+        function that returns the dictionary
         description with simple data structure (list, dictionary, string,
         integer and boolean) for JSON serialization of an object:
         '''
-        return obj.__dict__
+        return self.__dict__
