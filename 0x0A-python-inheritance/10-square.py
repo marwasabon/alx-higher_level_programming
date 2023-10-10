@@ -4,6 +4,8 @@ This is a Python script that defines a class named mylist..
 
 """
 
+Rectangle = __import__('9-rectangle').Rectangle
+
 
 class Square(Rectangle):
 
