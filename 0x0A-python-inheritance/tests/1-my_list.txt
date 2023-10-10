@@ -1,11 +1,14 @@
 """
 A class that inherits from list and prints a sorted version of the list.
 """
-
+:: Import MyList class to instantiate MyList objects
 
 	>>> MyList = __import__('1-my_list').MyList
 
 
+================================================================================
+
+:: Sort an empty list.
 
 	>>> my_list = MyList()
 	>>> ret = my_list.print_sorted()
@@ -14,6 +17,9 @@ A class that inherits from list and prints a sorted version of the list.
 	[]
 
 
+==============================================================================
+
+:: Case where the order naturally is high to low (descending order).
 
 	>>> my_list = MyList()
 	>>> my_list.append(10)
@@ -26,6 +32,10 @@ A class that inherits from list and prints a sorted version of the list.
 	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
 	[2, 4, 6, 8, 10]
 
+=========================================================================================
+
+:: Case where the order naturally is low to high (ascending order).
+
 	>>> my_list = MyList()
 	>>> my_list.append(2)
 	>>> my_list.append(4)
@@ -37,6 +47,9 @@ A class that inherits from list and prints a sorted version of the list.
 	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
 	[2, 4, 6, 8, 10]
 
+=========================================================================================
+
+:: Case where the order naturally is disorderly.
 
 	>>> my_list = MyList()
 	>>> my_list.append(8)
@@ -49,6 +62,9 @@ A class that inherits from list and prints a sorted version of the list.
 	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
 	[2, 4, 6, 8, 10]
 
+=========================================================================================
+
+:: Case where we have negative numbers.
 
 	>>> my_list = MyList()
 	>>> my_list.append(-10)
@@ -61,3 +77,4 @@ A class that inherits from list and prints a sorted version of the list.
 	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
 	[-10, -8, -7, -1, 2]
 
+=========================================================================================
