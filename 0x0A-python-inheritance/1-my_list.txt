@@ -1,2 +1,0 @@
-my_list = MyList([4, 2, 9, 1])
-my_list.print_sorted()
