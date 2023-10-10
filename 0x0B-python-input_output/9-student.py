@@ -6,8 +6,14 @@ This is a Python script..
 
 
 class Student:
+    '''
+    this is student class
+    '''
 
     def init(self, first_name, last_name, age):
+        '''
+        this instializing this class
+        '''
 
         self.first_name = first_name
 
@@ -16,8 +22,9 @@ class Student:
         self.age = age
 
     def to_json(self):
-        return {
-                'first_name': self.first_name,
-                'last_name': self.last_name,
-                'age': self.age
-                }
+        '''
+        Write a function that returns the dictionary
+        description with simple data structure (list, dictionary, string,
+        integer and boolean) for JSON serialization of an object:
+        '''
+        return obj.__dict__
