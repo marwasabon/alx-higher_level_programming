@@ -1,18 +1,63 @@
 """
 A class that inherits from list and prints a sorted version of the list.
 """
+
+
 	>>> MyList = __import__('1-my_list').MyList
+
+
+
+	>>> my_list = MyList()
+	>>> ret = my_list.print_sorted()
+	[]
+	>>> print(ret)
+	[]
+
+
 
 	>>> my_list = MyList()
 	>>> my_list.append(10)
 	>>> my_list.append(8)
 	>>> my_list.append(6)
-	st = __import__('1-my_list').MyList>>> my_list.append(4)
+	>>> my_list.append(4)
 	>>> my_list.append(2)
 	>>> ret = my_list.print_sorted() #doctest: +NORMALIZE_WHITESPACE
 	[2, 4, 6, 8, 10]
 	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
 	[2, 4, 6, 8, 10]
-	>>> my_list = MyList([4, 2, 9, 1])
-	>>> my_list.print_sorted()
-	[1, 2, 4, 9]
+
+	>>> my_list = MyList()
+	>>> my_list.append(2)
+	>>> my_list.append(4)
+	>>> my_list.append(6)
+	>>> my_list.append(8)
+	>>> my_list.append(10)
+	>>> ret = my_list.print_sorted() #doctest: +NORMALIZE_WHITESPACE
+	[2, 4, 6, 8, 10]
+	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
+	[2, 4, 6, 8, 10]
+
+
+	>>> my_list = MyList()
+	>>> my_list.append(8)
+	>>> my_list.append(10)
+	>>> my_list.append(2)
+	>>> my_list.append(6)
+	>>> my_list.append(4)
+	>>> ret = my_list.print_sorted() #doctest: +NORMALIZE_WHITESPACE
+	[2, 4, 6, 8, 10]
+	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
+	[2, 4, 6, 8, 10]
+
+
+	>>> my_list = MyList()
+	>>> my_list.append(-10)
+	>>> my_list.append(-7)
+	>>> my_list.append(-8)
+	>>> my_list.append(-1)
+	>>> my_list.append(2)
+	>>> ret = my_list.print_sorted() #doctest: +NORMALIZE_WHITESPACE
+	[-10, -8, -7, -1, 2]
+	>>> print(ret) #doctest: +NORMALIZE_WHITESPACE
+	[-10, -8, -7, -1, 2]
+
