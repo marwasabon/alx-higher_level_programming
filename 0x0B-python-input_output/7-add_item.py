@@ -8,10 +8,6 @@ import json
 import sys
 
 
-from 5-save_to_json_file.py import *
-from 6-load_from_json_file.py import *
-
-
 def load_from_json_file(filename):
     '''
     Write a script that adds all arguments to a
