@@ -8,17 +8,19 @@ import json
 import sys
 
 
+from 5-save_to_json_file.py import *
+from 6-load_from_json_file.py import *
+
+
 def load_from_json_file(filename):
     '''
     Write a script that adds all arguments to a
     Python list, and then save them to a file:
     '''
-
-    try:
-        with open(filename, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return []
+    with open(filename, 'r') as file:
+        json_string = file.read()
+        obj = json.loads(json_string)
+        return obj
 
 
 def save_to_json_file(my_obj, filename):
