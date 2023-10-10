@@ -1,12 +1,13 @@
 """
 A class that inherits from list and prints a sorted version of the list.
 """
-	>>> from my_list import my_list
+	>>> MyList = __import__('1-my_list').MyList
+
 	>>> my_list = MyList()
 	>>> my_list.append(10)
 	>>> my_list.append(8)
 	>>> my_list.append(6)
-	>>> my_list.append(4)
+	st = __import__('1-my_list').MyList>>> my_list.append(4)
 	>>> my_list.append(2)
 	>>> ret = my_list.print_sorted() #doctest: +NORMALIZE_WHITESPACE
 	[2, 4, 6, 8, 10]
