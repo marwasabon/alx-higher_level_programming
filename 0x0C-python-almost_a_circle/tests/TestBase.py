@@ -1,3 +1,8 @@
+import unittest
+import pep8
+from models.base import Base
+
+
 class TestBase(unittest.TestCase):
         """
         Test that all files.
