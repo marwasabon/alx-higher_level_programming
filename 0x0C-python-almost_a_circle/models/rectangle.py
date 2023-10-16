@@ -63,7 +63,22 @@ class Rectangle(Base):
                 self.height = kwargs['height']
 
     def perimeter(self):
+        '''
+        this is function that calsulate
+        '''
         return 2 * (self.width + self.height)
+
+    def to_dictionary(self):
+        '''
+        returns the dictionary representation of a Rectangle
+        '''
+        return {
+            'id': id(self),
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
 
     def area(self):
         '''
