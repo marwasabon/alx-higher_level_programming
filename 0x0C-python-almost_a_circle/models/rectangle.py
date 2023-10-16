@@ -33,11 +33,11 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        
+
     def update(self, *args):
         '''
-        Update the class Rectangle by adding the public method 
-        def update(self, *args): that assigns an argument to each attribute:   
+        Update the class Rectangle by adding the public method
+        def update(self, *args): that assigns an argument to each attribute:
         1st argument should be the id attribute
         2nd argument should be the width attribute
         3rd argument should be the height attribute
