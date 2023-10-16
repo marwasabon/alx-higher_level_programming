@@ -34,26 +34,24 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''
-        Update the class Rectangle by adding the public method
-        def update(self, *args): that assigns an argument to each attribute:
-        1st argument should be the id attribute
-        2nd argument should be the width attribute
-        3rd argument should be the height attribute
-        4th argument should be the x attribute
-        5th argument should be the y attribute
+        assigns a key/value argument to attributes
         '''
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.width = args[1]
-        if len(args) >= 3:
-            self.height = args[2]
-        if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
+        if args:
+            self.width = args[0]
+            self.height = args[1]
+        else:
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
 
     def area(self):
         '''
