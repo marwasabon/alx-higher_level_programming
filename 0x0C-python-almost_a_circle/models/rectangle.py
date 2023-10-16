@@ -53,9 +53,6 @@ class Rectangle(Base):
         prints in stdout the Rectangle instance
         with the character # - you don’t need to handle x and y here.
         '''
-        for _ in range(self.height):
-            print('#' * self.width)
-
         for _ in range(self.y):
             print()
         for _ in range(self.height):
