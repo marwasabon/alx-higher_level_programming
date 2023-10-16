@@ -33,13 +33,13 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        
+
     def area(self):
         '''
         returns the area value of the Rectangle instance.
         '''
         return self.width * self.height
-        
+
     @property
     def width(self):
         """
