@@ -18,7 +18,7 @@ class Rectangle(Base):
         y (int): The y-coordinate of the top-left corner of the rectangle.
         id (int): The id of the rectangle.
     """
-    def __init__(self, width, height, x=0, y=0):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes a Rectangle object.
         Args:
@@ -28,10 +28,11 @@ class Rectangle(Base):
             y (int): The y-coordinate of the top-left corner of the rectangle.
             id (int): The id of the rectangle.
         """
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        super().__init__(id)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     def update(self, *args, **kwargs):
         '''
