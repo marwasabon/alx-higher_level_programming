@@ -31,6 +31,18 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+    def to_dictionary(self):
+        '''
+        returns the dictionary representation of a square
+        '''
+        dictionary = {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+        }
+        return dictionary
+
     @property
     def size(self):
         """
