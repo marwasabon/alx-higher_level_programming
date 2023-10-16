@@ -48,3 +48,29 @@ class Base:
             return []
         else:
             return eval(json_string)
+
+@classmethod
+def create(cls, **dictionary):
+    """Creates a new instance of the class using a dictionary of attributes."""
+    if cls.__name__ == "Rectangle":
+        new_instance = cls(1, 1)
+    elif cls.__name__ == "Square":
+        new_instance = cls(1)
+    new_instance.update(**dictionary)
+    return new_instance
+
+@classmethod
+def load_from_file(cls):
+    """Loads a list of instances from a JSON file."""
+    filename = cls.__name__ + ".json"
+    try:
+        with open(filename, 'r') as file:
+            json_string = file.read()
+            instances_data = cls.from_json_string(json_string)
+            instances = []
+            for data in instances_data:
+                instance = cls.create(**data)
+                instances.append(instance)
+            return instances
+    except FileNotFoundError:
+        return []
