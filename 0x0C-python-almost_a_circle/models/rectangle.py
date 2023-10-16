@@ -34,7 +34,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    def update(self, *args):
+    def update1(self, *args):
         '''
         assigns a key/value argument to attributes
         '''
@@ -47,7 +47,7 @@ class Rectangle(Base):
         if len(args) >= 4:
             self.x = args[3]
         if len(args) >= 5:
-            self.y = args[4
+            self.y = args[4]
 
     def update(self, *args, **kwargs):
         '''
@@ -62,7 +62,6 @@ class Rectangle(Base):
             if 'height' in kwargs:
                 self.height = kwargs['height']
 
- 
     def perimeter(self):
         return 2 * (self.width + self.height)
 
