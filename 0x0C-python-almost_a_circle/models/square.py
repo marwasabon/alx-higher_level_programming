@@ -82,13 +82,13 @@ class Square(Rectangle):
         '''
         returns the dictionary representation of a Rectangle
         '''
-        dictionary = {
-            'id': self.id,
-            'size': self.size,
+        return {
+            'id': id(self),
+            'width': self.width,
+            'height': self.height,
             'x': self.x,
             'y': self.y
         }
-        return dictionary
 
     def __str__(self):
         '''
