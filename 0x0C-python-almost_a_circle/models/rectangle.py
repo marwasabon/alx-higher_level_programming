@@ -28,11 +28,7 @@ class Rectangle(Base):
             y (int): The y-coordinate of the top-left corner of the rectangle.
             id (int): The id of the rectangle.
         """
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        super().__init__(size, size, x, y, id)    
 
     def update(self, *args, **kwargs):
         '''
@@ -47,9 +43,7 @@ class Rectangle(Base):
             if 'height' in kwargs:
                 self.height = kwargs['height']
 
-    def area(self):
-        return self.width * self.height
-
+ 
     def perimeter(self):
         return 2 * (self.width + self.height)
 
