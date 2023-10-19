@@ -40,7 +40,7 @@ class Base:
         with open(filename, 'w') as file:
             file.write(json_str)
 
-    @classmethod
+    @staticmethod
     def from_json_string(json_string):
         '''
         Returns the list from the JSON string representation json_string:
