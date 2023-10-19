@@ -56,9 +56,9 @@ class Base:
         Create an instance of the class using the given dictionary.
         """
         if cls.__name__ == "Rectangle":
-            new_instance = Rectangle(1, 1)
+            new_instance = cls(1, 1)
         elif cls.__name__ == "Square":
-            new_instance = Square(1)
+            new_instance = cls(1)
         else:
             raise ValueError("Invalid class name")
         new_instance.update(**dictionary)
