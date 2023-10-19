@@ -49,16 +49,29 @@ class TestBase(unittest.TestCase):
                 """
                 Test the from_json_string method.
                 """
-                # Test with an empty string
-                json_string = ""
-                list_dictionaries = Base.from_json_string(json_string)
-                self.assertEqual(list_dictionaries, [])
-        
-                # Test with a non-empty string
-                json_string = '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]'
-                list_dictionaries = Base.from_json_string(json_string)
-                expected_list_dictionaries = [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}]
-                self.assertEqual(list_dictionaries, expected_list_dictionaries)
+                # Test with valid JSON string
+                json_string = '[1, 2, 3]'
+                expected_result = [1, 2, 3]
+                actual_result = MyClass.from_json_string(json_string)
+                self.assertEqual(actual_result, expected_result)
+                
+                # Test with invalid JSON string
+                json_string = 'invalid json'
+                expected_result = []
+                actual_result = MyClass.from_json_string(json_string)
+                self.assertEqual(actual_result, expected_result)
+                
+                # Test with empty JSON string
+                json_string = ''
+                expected_result = []
+                actual_result = MyClass.from_json_string(json_string)
+                self.assertEqual(actual_result, expected_result)
+                
+                # Test with None input
+                json_string = None
+                expected_result = []
+                actual_result = MyClass.from_json_string(json_string)
+                self.assertEqual(actual_result, expected_result)
         
 
         def test_create_rectangle(self):
