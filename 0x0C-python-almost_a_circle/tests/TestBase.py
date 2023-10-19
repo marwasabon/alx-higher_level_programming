@@ -94,7 +94,7 @@ class TestBase(unittest.TestCase):
                 """                
                 dictionary = {"width": 5, "height": 10}
                 with self.assertRaises(ValueError):
-                    actual_instance = InvalidClass.create(**dictionary)
+                    actual_instance = Base.create(**dictionary)
 
         def test_load_from_file(self):
                 """
