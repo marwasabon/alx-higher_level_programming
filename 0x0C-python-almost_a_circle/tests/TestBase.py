@@ -76,11 +76,11 @@ class TestBase(unittest.TestCase):
                 """
                 Test the create method.
                 """
-                dictionary = {"side_length": 7}
+                dictionary = {"size": 7}
                 expected_instance = Square(7)
                 actual_instance = Square.create(**dictionary)
                 self.assertEqual(actual_instance.__class__, expected_instance.__class__)
-                self.assertEqual(actual_instance.side_length, expected_instance.side_length)
+                self.assertEqual(actual_instance.width, expected_instance.width)
 
         def test_create_invalid_class(self):
                 """
