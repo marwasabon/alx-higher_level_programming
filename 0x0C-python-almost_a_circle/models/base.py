@@ -50,7 +50,6 @@ class Base:
         else:
             return eval(json_string)
 
-    @classmethod
     def create(cls, **dictionary):
         """
         Create an instance of the class using the given dictionary.
