@@ -48,8 +48,6 @@ class TestBase(unittest.TestCase):
         def test_from_json_string_with_data(self):
                 data = '[{"id": 89}]'
                 self.assertEqual(Base.from_json_string(data), [{'id': 89}])
-
-class TestRectangle(unittest.TestCase):
         
         def test_rectangle_create(self):
                 r = Rectangle(1, 2)
