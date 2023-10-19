@@ -53,16 +53,17 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
-        Creates a new instance of
-        the class using a dictionary of attributes.
+        Create an instance of the class using the given dictionary.
         """
         if cls.__name__ == "Rectangle":
-            new_instance = cls(1, 1)
+            new_instance = Rectangle(1, 1)
         elif cls.__name__ == "Square":
-            new_instance = cls(1)
+            new_instance = Square(1)
+        else:
+            new_instance = None
         new_instance.update(**dictionary)
         return new_instance
-
+        
     @classmethod
     def load_from_file(cls):
         """Loads a list of instances from a JSON file."""
