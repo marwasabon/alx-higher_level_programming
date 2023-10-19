@@ -2,8 +2,8 @@
 import unittest
 from models.base import Base
 from models.InvalidClass import InvalidClass
-from models.Rectangle import Rectangle
-from models.Square import Square
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase(unittest.TestCase):
