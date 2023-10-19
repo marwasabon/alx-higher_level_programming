@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import unittest
 from models.base import Base
+from models.InvalidClass import InvalidClass
 
 
 class TestBase(unittest.TestCase):
