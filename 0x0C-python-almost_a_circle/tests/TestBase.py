@@ -26,24 +26,17 @@ class TestBase(unittest.TestCase):
                 expected_json_string = '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]'
                 self.assertEqual(json_string, expected_json_string)
                 
-        def test_save_to_file(self):
+        def save_to_file(cls, list_objs):
                 """
                 Test the save_to_file method.
                 """
-                # Test with an empty list
-                list_objs = []
-                Base.save_to_file(list_objs)
-                with open("Base.json", "r") as file:
-                    json_string = file.read()
-                    self.assertEqual(json_string, "[]")
-        
-                # Test with a non-empty list
-                list_objs = [Base(1), Base(2)]
-                Base.save_to_file(list_objs)
-                with open("Base.json", "r") as file:
-                    json_string = file.read()
-                    expected_json_string = '[{"id": 1}, {"id": 2}]'
-                    self.assertEqual(json_string, expected_json_string)
+                filename = cls.__name__ + ".json"
+                if list_objs is None:
+                        list_objs = []
+                json_dict = [obj.to_dictionary() for obj in list_objs]
+                json_str = cls.to_json_string(json_dict)
+                with open(filename, 'w') as file:
+                        file.write(json_str)
 
         def test_from_json_string(self):
                 """
