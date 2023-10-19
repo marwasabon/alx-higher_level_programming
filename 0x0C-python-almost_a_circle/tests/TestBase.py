@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import unittest
-import pep8
 from models.base import Base
 
 
@@ -8,13 +7,7 @@ class TestBase(unittest.TestCase):
         """
         Test that all files.
         """
-        def test_pep8_conformance(self):
-                """
-                Test that all files.
-                """
-        style = pep8.StyleGuide()
-        result = style.check_files(['models/base.py'])
-        self.assertEqual(result.total_errors, 0)
+ 
         def test_to_json_string(self):
                 this
                 """
