@@ -57,22 +57,35 @@ class TestBase(unittest.TestCase):
                 expected_list_dictionaries = [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}]
                 self.assertEqual(list_dictionaries, expected_list_dictionaries)
         
-        def test_create(self):
+
+        def test_create_rectangle(self):
                 """
                 Test the create method.
                 """
-                # Test with a Rectangle
-                rectangle_dict = {'id': 1, 'width': 2, 'height': 3}
-                rectangle = Base.create(**rectangle_dict)
-                self.assertEqual(rectangle.id, 1)
-                self.assertEqual(rectangle.width, 2)
-                self.assertEqual(rectangle.height, 3)
+                dictionary = {"width": 5, "height": 10}
+                expected_instance = Rectangle(5, 10)
+                actual_instance = Rectangle.create(**dictionary)
+                self.assertEqual(actual_instance.__class__, expected_instance.__class__)
+                self.assertEqual(actual_instance.width, expected_instance.width)
+                self.assertEqual(actual_instance.height, expected_instance.height)
         
-                # Test with a Square
-                square_dict = {'id': 2, 'size': 4}
-                square = Base.create(**square_dict)
-                self.assertEqual(square.id, 2)
-                self.assertEqual(square.size, 4)
+        def test_create_square(self):
+                """
+                Test the create method.
+                """
+                dictionary = {"side_length": 7}
+                expected_instance = Square(7)
+                actual_instance = Square.create(**dictionary)
+                self.assertEqual(actual_instance.__class__, expected_instance.__class__)
+                self.assertEqual(actual_instance.side_length, expected_instance.side_length)
+
+        def test_create_invalid_class(self):
+                """
+                Test the create method.
+                """                
+                dictionary = {"width": 5, "height": 10}
+                with self.assertRaises(ValueError):
+                    actual_instance = InvalidClass.create(**dictionary)
 
         def test_load_from_file(self):
                 """
