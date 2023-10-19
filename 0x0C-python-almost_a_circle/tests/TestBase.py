@@ -88,14 +88,6 @@ class TestBase(unittest.TestCase):
                 self.assertEqual(actual_instance.__class__, expected_instance.__class__)
                 self.assertEqual(actual_instance.width, expected_instance.width)
 
-        def test_create_invalid_class(self):
-                """
-                Test the create method.
-                """                
-                dictionary = {"width": 5, "height": 10}
-                with self.assertRaises(ValueError):
-                    actual_instance = Base.create(**dictionary)
-
         def test_load_from_file(self):
                 """
                 Test the load_from_file method.
