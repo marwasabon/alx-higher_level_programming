@@ -9,7 +9,6 @@ class TestBase(unittest.TestCase):
         """
  
         def test_to_json_string(self):
-                this
                 """
                 Test the to_json_string method.
                 """
