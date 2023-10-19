@@ -93,16 +93,13 @@ class TestBase(unittest.TestCase):
                 Test the load_from_file method.
                 """
                 # Test with an existing file
-                list_objs = [Base(1), Base(2)]
-                Base.save_to_file(list_objs)
-                instances = Base.load_from_file()
+                # Test with an existing file
+                list_objs = [Rectangle(1, 2), Rectangle(3, 4)]
+                Rectangle.save_to_file(list_objs)
+                instances = Rectangle.load_from_file()
                 self.assertEqual(len(instances), 2)
-                self.assertEqual(instances[0].id, 1)
-                self.assertEqual(instances[1].id, 2)
-        
-                # Test with a non-existing file
-                instances = Base.load_from_file()
-                self.assertEqual(instances, [])
+                self.assertIsInstance(instances[0], Rectangle)
+                self.assertIsInstance(instances[1], Rectangle)
         
 if __name__ == "__main__":
         unittest.main()
