@@ -10,8 +10,7 @@ class TestBase(unittest.TestCase):
         """
         Test that all files.
         """
-class TestBase(unittest.TestCase):
-
+        
         def test_base_auto_id(self):
                 b1 = Base()
                 b2 = Base()
