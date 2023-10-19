@@ -82,3 +82,7 @@ class Base:
                 return instances
         except FileNotFoundError:
             return []
+    
+    def to_dictionary(self):
+        """Returns a dictionary representation of the instance."""
+        return self.__dict__
