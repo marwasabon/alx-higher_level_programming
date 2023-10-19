@@ -31,5 +31,5 @@ class TestBase(unittest.TestCase):
                 expected_json_string = '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]'
                 self.assertEqual(json_string, expected_json_string)
         
-        if name == "main":
+if name == "main":
         unittest.main()
