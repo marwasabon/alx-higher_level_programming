@@ -12,6 +12,7 @@ class TestBase(unittest.TestCase):
         """
         
         def test_base_auto_id(self):
+                '''this 1'''
                 b1 = Base()
                 b2 = Base()
                 self.assertEqual(b1.id, 1)
