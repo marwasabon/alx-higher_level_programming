@@ -60,7 +60,7 @@ class Base:
         elif cls.__name__ == "Square":
             new_instance = Square(1)
         else:
-            new_instance = None
+            raise ValueError("Invalid class name")
         new_instance.update(**dictionary)
         return new_instance
         
