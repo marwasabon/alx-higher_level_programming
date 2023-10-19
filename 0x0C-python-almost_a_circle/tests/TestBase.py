@@ -52,25 +52,25 @@ class TestBase(unittest.TestCase):
                 # Test with valid JSON string
                 json_string = '[1, 2, 3]'
                 expected_result = [1, 2, 3]
-                actual_result = MyClass.from_json_string(json_string)
+                actual_result = Base.from_json_string(json_string)
                 self.assertEqual(actual_result, expected_result)
                 
                 # Test with invalid JSON string
                 json_string = 'invalid json'
                 expected_result = []
-                actual_result = MyClass.from_json_string(json_string)
+                actual_result = Base.from_json_string(json_string)
                 self.assertEqual(actual_result, expected_result)
                 
                 # Test with empty JSON string
                 json_string = ''
                 expected_result = []
-                actual_result = MyClass.from_json_string(json_string)
+                actual_result = Base.from_json_string(json_string)
                 self.assertEqual(actual_result, expected_result)
                 
                 # Test with None input
                 json_string = None
                 expected_result = []
-                actual_result = MyClass.from_json_string(json_string)
+                actual_result = Base.from_json_string(json_string)
                 self.assertEqual(actual_result, expected_result)
         
 
