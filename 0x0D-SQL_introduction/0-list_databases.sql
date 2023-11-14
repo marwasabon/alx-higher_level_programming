@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-show databases;
+# this is my sql 
+SHOW databases;
