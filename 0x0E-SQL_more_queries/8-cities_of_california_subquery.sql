@@ -2,6 +2,4 @@
 # this is my sql 
 -- lists all privileges
 SELECT * FROM cities 
-WHERE state_id = (SELECT id FROM states WHERE name = 'California')
--- List all the cities of California from the cities table
-SELECT * FROM cities WHERE state_id = @california_id ORDER BY id ASC;
+WHERE state_id = (SELECT id FROM states WHERE name = 'California') ORDER BY id ASC;
