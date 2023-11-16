@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# this is my sql 
+-- lists all privileges
+SHOW GRANTS FOR 'user_0d_1'@'localhost';
+-- Creates DB
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+
+-- Use the database
+USE hbtn_0d_usa;
+
+-- Check if the table exists and create the table if not
+CREATE TABLE IF NOT EXISTS cities (
+	  id INT AUTO_INCREMENT,
+	  state_id INT NOT NULL,
+	  name VARCHAR(256) NOT NULL,
+	  PRIMARY KEY (id),
+	  FOREIGN KEY (state_id) REFERENCES states(id)
+	);
