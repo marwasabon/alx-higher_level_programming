@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-# this is my sql 
 -- lists all privileges
 -- Checks if the database exists and create the database if not
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
