@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # this is my sql 
 -- lists all privileges
-SHOW GRANTS FOR 'user_0d_1'@'localhost';
 -- Creates DB
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 
