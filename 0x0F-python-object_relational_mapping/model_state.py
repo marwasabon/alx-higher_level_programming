@@ -14,6 +14,7 @@ if __name__ == "__main__":
     # Define a model for the states table
 
     class State(Base):
+    """ORM class to connect to table in database"""
         __tablename__ = 'states'
         id = Column(Integer, primary_key=True)
         name = Column(String(128), nullable=False)
