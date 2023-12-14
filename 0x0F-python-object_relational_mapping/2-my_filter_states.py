@@ -16,7 +16,7 @@ if __name__ == "__main__":
     # defie db cursor
     cursor = db.cursor()
     cursor.execute("""
-    SELECT * FROM states WHERE name LIKE '{}'
+    SELECT * FROM states WHERE name LIKE BINARY '{}'
     """.format(sys.argv[4])
     )
     rows = cursor.fetchall()
