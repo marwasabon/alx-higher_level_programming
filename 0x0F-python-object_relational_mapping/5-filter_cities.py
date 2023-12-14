@@ -23,6 +23,6 @@ if __name__ == "__main__":
             WHERE states.name=%s""", (val,))
     rows = cursor.fetchall()
     mylist_val = list(row[0] for row in rows)
-    print(*mylist_val, sep= ", ")
+    print(*mylist_val, sep=", ")
     cursor.close()
     db.close()
