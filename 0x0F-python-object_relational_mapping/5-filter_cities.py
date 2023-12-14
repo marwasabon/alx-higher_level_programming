@@ -22,7 +22,7 @@ if __name__ == "__main__":
             cities INNER JOIN states ON states.id = cities.state_id
             WHERE states.name=%s""", (val,))
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    mylist_val = list(row[0] for row in rows)
+    print(*mylist_val, sep= ", ")
     cursor.close()
     db.close()
