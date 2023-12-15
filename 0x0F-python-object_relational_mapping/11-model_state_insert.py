@@ -16,5 +16,6 @@ if __name__ == "__main__":
     newObj = State(name='Louisiana')
     session = Session()
     session.add(newObj)
-    for instance in session.query(State).order_by(State.id):
-        print(instance.id, instance.name, sep=": ")
+    new_instance = session.query(State).filter_by(name='Louisiana').first()
+    print(new_instance.id)
+    session.commit()
