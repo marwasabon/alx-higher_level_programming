@@ -7,7 +7,6 @@
 if __name__ == '__main__':
     import requests
     import sys
-    from requests.auth import HTTPBasicAuth
 
     repository = sys.argv[1]
     owner = sys.argv[2]
